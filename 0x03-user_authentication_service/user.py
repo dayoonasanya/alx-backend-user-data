@@ -6,6 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class User(Base):
     """Represents a user for the authentication service."""
     __tablename__ = 'users'
@@ -16,7 +17,7 @@ class User(Base):
     session_id = Column(String(250), nullable=True)
     reset_token = Column(String(250), nullable=True)
 
+
 if __name__ == "__main__":
     engine = create_engine('sqlite:///user_auth.db')
     Base.metadata.create_all(engine)
-
