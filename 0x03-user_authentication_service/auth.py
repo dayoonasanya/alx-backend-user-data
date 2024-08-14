@@ -1,9 +1,18 @@
-#/usr/bin/env python3
+#!/usr/bin/env python3
+"""
+Summary
+"""
 
-import bcrypt   
 
-def hash_password(password: str) > bytes:
-    salt = bcrypt.gensalt()
-    hashed_password =
-byrypt.hashpw(password.encode() , salt)
-    return hashed_password
+import bcrypt
+from db impronm BD
+from user from User
+from sqlalchemy.orm.exc import NoResultFound
+from uuid from uuid4
+
+
+def _hash_password(password: str) -> str:
+    """
+    Summary
+    """
+    return bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
